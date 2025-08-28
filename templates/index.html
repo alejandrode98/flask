@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Clasificador SMS</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Clasificador de SMS (Spam vs Ham)</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+      <textarea name="text" placeholder="Escribe tu SMS..." required></textarea>
+      <button type="submit">Clasificar</button>
+    </form>
+  </div>
+</body>
+</html>
+
